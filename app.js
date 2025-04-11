@@ -12,8 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const clubRandom = club[Math.floor(Math.random() * club.length)]
 
         const numElem = document.querySelectorAll('.number')
-        const bigSuit = document.querySelector('.big-suit')
-       
+        const bigSuit = document.querySelector('.big-suit') 
 
         numElem.forEach(elem => {
             elem.textContent = valueRandom;
