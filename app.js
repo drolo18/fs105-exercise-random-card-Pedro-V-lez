@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
         bigSuit.className = `big-suit ${clubRandom.color}`
     }
 
-
     generateCardAleatory()
 
 
@@ -32,4 +31,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     window.addEventListener('load', generateCardAleatory)
+
+    function startCountdown() {
+        let timeLeft = 11
+        const timeDisplay = document.querySelector('.time')
+        
+        const countdownInterval = setInterval(() => {
+            timeLeft--
+            timeDisplay.textContent = timeLeft
+            
+            if (timeLeft === 0) {
+                clearInterval(countdownInterval)
+                window.location.reload()
+            }
+        }, 1000)
+    }
+
+    startCountdown()
 })
