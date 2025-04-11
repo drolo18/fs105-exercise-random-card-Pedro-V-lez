@@ -26,9 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     generateCardAleatory()
 
-
     document.querySelector('#newCard').addEventListener('click', generateCardAleatory)
-
 
     window.addEventListener('load', generateCardAleatory)
 
