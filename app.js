@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('load', generateCardAleatory)
 
+    //función cuenta atrás
     function startCountdown() {
         let timeLeft = 11
         const timeDisplay = document.querySelector('.time')
@@ -45,4 +46,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     startCountdown()
+
+    //función cambio de tamaño
+    function cardSize () {
+        const card = document.querySelector('.card')
+        const height = document.querySelector ('#cardHeight').value
+        const width = document.querySelector ('#cardWidth').value
+
+        card.style.height = `${height}px`
+        card.style.width = `${width}px`
+
+    }
+
+    document.querySelector('#cardHeight').addEventListener('input', cardSize)
+    document.querySelector('#cardWidth').addEventListener('input', cardSize)
 })
